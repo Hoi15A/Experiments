@@ -1,6 +1,8 @@
 #!/bin/bash
 shopt -s nocaseglob
 clear
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
 
 function run {
   clear
@@ -10,11 +12,10 @@ function run {
   do
     printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
     printf "\n"
-    ../VitaBrickCheck/VitaBrickCheck.sh "$vpk"
+    sh ../VitaBrickCheck/VitaBrickCheck.sh "$vpk"
   done
 
   printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' ━
-  printf "COMPLETE!\nScroll up for the results.\n\n"
 }
 
 function quit {
@@ -42,3 +43,5 @@ select yn in "Yes" "No"; do
       No ) quit; break;;
   esac
 done
+
+read -rsp $'COMPLETE!\nScroll up for the results.\n\nPush any key to end...' -n 1 key
