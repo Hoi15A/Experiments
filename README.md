@@ -1,3 +1,9 @@
+# Fork Info
+This fork adds adds a script file that will run the VitaBrickCheck for all VPK's in the CheckVPK Directory.
+It exists mainly for my own convenience and will likely not update.
+
+<hr/>
+
 # Experiments
 Little tools and experiments that may be useful for you
 

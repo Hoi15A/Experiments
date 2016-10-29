@@ -1,0 +1,5 @@
+.DS_Store
+
+CheckVPK/*
+!CheckVPK/checkAll.sh
+!CheckVPK/VPKsGoHere
